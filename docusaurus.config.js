@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Kelvin Y\'s Notes',
+  tagline: 'Documentations',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -31,7 +31,8 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh'],
+    locales: ['en'],
+    // locales: ['en', 'zh'],
   },
 
   presets: [
@@ -78,14 +79,14 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {
-            to: '/notes',
-            position: 'left',
-            label: 'Notes',
-          },
+          // {
+          //   to: '/notes',
+          //   position: 'left',
+          //   label: 'Notes',
+          // },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/KelvinYou',
             label: 'GitHub',
             position: 'right',
           },
