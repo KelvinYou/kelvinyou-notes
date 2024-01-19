@@ -20,8 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Kelvin You', // Usually your GitHub org/user name.
+  projectName: 'Kelvin You | Notes', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -75,14 +75,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'notes',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Notes',
           },
           // {
-          //   to: '/notes',
+          //   type: 'docSidebar',
+          //   sidebarId: 'techs',
           //   position: 'left',
-          //   label: 'Notes',
+          //   label: 'Tech',
           // },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
