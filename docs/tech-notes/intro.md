@@ -1,0 +1,24 @@
+---
+sidebar_position: 1
+---
+
+# Introduction
+
+## Type of Note
+- [React](/docs/category/react)
+- [Solidity](/docs/category/solidity)
+- [Markdown](/docs/category/markdown)
+
+Continuously updating...
+
+:::note
+
+If the code in the React article has an interactive Result, the `import` and `export` will not be displayed, because then the live code block will be wrong.
+
+:::
+
+## Logs
+
+- 2024-01-22: Added `React`, `Solidity`, `Markdown` package.
+
+

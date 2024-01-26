@@ -1,0 +1,26 @@
+---
+sidebar_position: 1
+---
+
+# [Hooks] useState
+
+
+[useState](https://react.dev/reference/react/useState) is a React Hook that lets you add a state variable to your component.
+
+```js
+const [state, setState] = useState(initialState)
+```
+
+In my experience it is mainly used when the current component needs to be re-rendered to make some changes to the UI
+
+## Reference
+
+```js
+import { useState } from 'react';
+
+function MyComponent() {
+  const [age, setAge] = useState(28);
+  const [name, setName] = useState('Kelvin');
+  const [todos, setTodos] = useState(() => createTodos());
+  // ...
+```
