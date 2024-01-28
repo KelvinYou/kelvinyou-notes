@@ -1,5 +1,5 @@
-# [Puppeteer] Introduction
+# Puppeteer - Introduction
 
+[Puppeteer](https://pptr.dev) is a framework for headless Chrome testing, allowing users to control the browser using commands written in JavaScript.
 
-* Docs: [https://pptr.dev](https://pptr.dev)
 * Github: [https://github.com/puppeteer/puppeteer](https://github.com/puppeteer/puppeteer)

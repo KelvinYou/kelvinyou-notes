@@ -79,6 +79,12 @@ const config = {
             position: 'left',
             label: 'Tech Notes',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'careerDevNotes',
+            position: 'left',
+            label: 'Career Development Notes',
+          },
           // {
           //   type: 'docSidebar',
           //   sidebarId: 'techs',
