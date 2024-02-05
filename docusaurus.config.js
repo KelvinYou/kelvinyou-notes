@@ -111,7 +111,7 @@ const config = {
             items: [
               {
                 label: 'Tech Notes',
-                to: '/docs/tech-notes/intro',
+                to: '/docs/tech-notes/',
               },
             ],
           },
