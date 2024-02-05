@@ -81,9 +81,9 @@ const config = {
           },
           {
             type: 'docSidebar',
-            sidebarId: 'careerDevNotes',
+            sidebarId: 'personalGrowthNotes',
             position: 'left',
-            label: 'Career Development Notes',
+            label: 'Personal Growth Notes',
           },
           // {
           //   type: 'docSidebar',
