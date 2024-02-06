@@ -8,7 +8,7 @@ Layout priorities from high to low.
 
 
 
-## I plan to master it
+## I plan to learn / master
 1. [GraphQL](https://graphql.org)
 1. [PostgreSQL](https://www.postgresql.org)
 1. [MongoDB](https://www.mongodb.com)

@@ -1,0 +1,41 @@
+---
+sidebar_position: 4
+---
+
+# React - useRef
+
+
+[`useRef`](https://react.dev/reference/react/useRef) is a React Hook that lets you reference a value that’s not needed for rendering.
+
+```js
+const ref = useRef(initialValue)
+```
+
+In my experience, useRef is utilized to optimize component rendering time. When a subsequent useState call triggers a component rerender, useRef can be employed to replace the previous reference, thereby preventing unnecessary rerenders.
+
+## Reference
+
+```js
+import React, { useState, useRef } from 'react';
+
+function ExampleComponent() {
+  const [count, setCount] = useState(0);
+  const refCount = useRef(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+    refCount.current += 1;
+  };
+
+  return (
+    <div>
+      <p>State count: {count}</p>
+      <p>Ref count: {refCount.current}</p>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  );
+}
+
+export default ExampleComponent;
+
+```

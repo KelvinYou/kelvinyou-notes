@@ -12,7 +12,7 @@ Layout priorities from high to low.
 
 
 
-## I plan to master it
+## I plan to learn / master
 
 1. [Rust](https://www.rust-lang.org)
     - [Wrap](https://docs.rs/warp/latest/warp/) - Super powerful framework, can train my logic

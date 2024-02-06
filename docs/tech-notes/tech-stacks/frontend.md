@@ -22,12 +22,12 @@ Layout priorities from high to low.
 :::
 
 1. [NextJS](https://nextjs.org)
-1. [CRA](https://create-react-app.dev)
+1. [Create React App (CRA)](https://create-react-app.dev)
 1. [ViteJS](https://vitejs.dev)
 
 
 <!-- 
-## I plan to master it
+## I plan to learn / master
 
 1.  
 -->
