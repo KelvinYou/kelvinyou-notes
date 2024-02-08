@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Introduction
 
+:::note For Myself
+
+Keep my notes as simple as possible. I am the only user of this.
+
+:::
+
 ## Type of Note
 - [React](/docs/category/react)
 - [Solidity](/docs/category/solidity)
