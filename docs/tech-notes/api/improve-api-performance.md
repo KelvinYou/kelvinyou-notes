@@ -2,7 +2,7 @@
 
 ## How to Improve API Performance?
 
-[Original Image](https://media.licdn.com/dms/image/D5622AQEpIMPVRjy5Xw/feedshare-shrink_2048_1536/0/1704000168554?e=1710374400&v=beta&t=hUyIxTS333nIbqlswz8_SpVU2xOEFdJMXlhSZ65aDlI)
+![Original Image](https://media.licdn.com/dms/image/D5622AQEpIMPVRjy5Xw/feedshare-shrink_2048_1536/0/1704000168554?e=1710374400&v=beta&t=hUyIxTS333nIbqlswz8_SpVU2xOEFdJMXlhSZ65aDlI)
 
 ### Pagination
 
