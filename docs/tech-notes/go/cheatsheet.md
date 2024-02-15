@@ -1,20 +1,5 @@
 # Go - Cheat Sheet
 
-https://devhints.io/go
-
-:::note For myself
-To continue:
-1. Flow control
-2. Functions
-3. Concurrency
-4. Error Control
-5. Structs
-6. Methods
-6. Interfaces
-7. References
-
-:::
-
 ## Basic Types & Variables
 
 
@@ -108,9 +93,15 @@ a := new(int)
 - See: [Pointers](https://go.dev/tour/moretypes/1)
 
 
+### Type Conversions
 
+```go
+i := 2
+f := float64(i)
+u := uint(i)
+```
 
-
+- See: [Type conversions](https://go.dev/tour/basics/13)
 
 ## Hello world
 
@@ -158,3 +149,422 @@ const (
 
 // It then uses the `iota` identifier to tell the Go compiler you want the first value to start at 0, and then increment by 1 for each following constant
 ```
+
+## Flow Control
+
+### Conditional
+
+```go
+if day == "sunday" || day == "saturday" {
+  rest()
+} else if day == "monday" && isTired() {
+  groan()
+} else {
+  work()
+}
+```
+
+- See: [If](https://go.dev/tour/flowcontrol/5)
+
+### Statements in if
+
+```go
+if _, err := doThing(); err != nil {
+  fmt.Println("Uh oh")
+}
+```
+
+- A condition in an if statement can be preceded with a statement before a ;. Variables declared by the statement are only in scope until the end of the if.
+- See: [If with a short statement](https://go.dev/tour/flowcontrol/6)
+
+### Switch
+
+```go
+switch day {
+  case "sunday":
+    // cases don't "fall through" by default!
+    fallthrough
+
+  case "saturday":
+    rest()
+
+  default:
+    work()
+}
+```
+
+- See: [Switch](https://go.dev/wiki/Switch)
+
+### For loop
+
+```go
+for count := 0; count <= 10; count++ {
+  fmt.Println("My counter is at", count)
+}
+```
+
+- See: [For loops](https://go.dev/tour/flowcontrol/1)
+
+### For-Range loop
+
+```go
+entry := []string{"Jack","John","Jones"}
+for i, val := range entry {
+  fmt.Printf("At position %d, the character %s is present\n", i, val)
+}
+```
+
+- See: [For-Range loops](https://gobyexample.com/range)
+
+### While loop
+
+```go
+n := 0
+x := 42
+for n != x {
+  n := guess()
+}
+```
+
+See: [Go’s “while”](https://go.dev/tour/flowcontrol/3)
+
+
+
+## Functions
+
+### Lambdas
+
+```go
+myfunc := func() bool {
+  return x > 10000
+}
+```
+
+- Functions are first class objects.
+
+### Multiple return types
+
+```go
+a, b := getMessage()
+func getMessage() (a string, b string) {
+  return "Hello", "World"
+}
+```
+
+### Named return values
+
+```go
+func split(sum int) (x, y int) {
+  x = sum * 4 / 9
+  y = sum - x
+  return
+}
+
+```
+
+- By defining the return value names in the signature, a return (no args) will return variables with those names.
+- See: [Named return values](https://go.dev/tour/basics/7)
+
+## Packages
+
+### Importing
+
+```go
+import "fmt"
+import "math/rand"
+
+// OR
+
+import (
+  "fmt"        // gives fmt.Println
+  "math/rand"  // gives rand.Intn
+)
+
+// Both are the same.
+```
+
+- See: [Importing](https://go.dev/tour/basics/1)
+
+
+### Aliases
+
+```go
+import r "math/rand"
+
+...
+r.Intn()
+```
+
+### Packages
+
+```go
+package hello
+```
+
+- Every package file has to start with package.
+
+### Exporting names
+
+```go
+func Hello () {
+  ···
+}
+```
+
+- Exported names begin with capital letters.
+- See: [Exported names](https://go.dev/tour/basics/3)
+
+## Concurrency
+
+### Goroutines
+
+```go
+func main() {
+  // A "channel"
+  ch := make(chan string)
+
+  // Start concurrent routines
+  go push("Moe", ch)
+  go push("Larry", ch)
+  go push("Curly", ch)
+
+  // Read 3 results
+  // (Since our goroutines are concurrent,
+  // the order isn't guaranteed!)
+  fmt.Println(<-ch, <-ch, <-ch)
+}
+ 
+func push(name string, ch chan string) {
+  msg := "Hey, " + name
+  ch <- msg
+}
+```
+
+- Channels are concurrency-safe communication objects, used in goroutines.
+- See: [Goroutines](https://go.dev/tour/concurrency/1), [Channels](https://go.dev/tour/concurrency/2)
+
+
+### Buffered Channels
+
+```go
+ch := make(chan int, 2)
+ch <- 1
+ch <- 2
+ch <- 3
+// fatal error:
+// all goroutines are asleep - deadlock!
+```
+
+- Buffered channels limit the amount of messages it can keep.
+- See: [Buffered channels](https://go.dev/tour/concurrency/3)
+
+### Closing Channels
+
+```go
+// Closes a channel
+ch <- 1
+ch <- 2
+ch <- 3
+close(ch)
+
+// Iterates across a channel until its closed
+for i := range ch {
+  ···
+}
+
+// Closed if ok == false
+v, ok := <- ch
+```
+
+- See: [Range and close](https://go.dev/tour/concurrency/4)
+
+### WaitGroup
+
+```go
+import "sync"
+
+func main() {
+  var wg sync.WaitGroup
+  
+  for _, item := range itemList {
+    // Increment WaitGroup Counter
+    wg.Add(1)
+    go doOperation(&wg, item)
+  }
+  // Wait for goroutines to finish
+  wg.Wait()
+  
+}
+ 
+func doOperation(wg *sync.WaitGroup, item string) {
+  defer wg.Done()
+  // do operation on item
+  // ...
+}
+
+```
+
+- A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. The goroutine calls wg.Done() when it finishes. 
+- See: [WaitGroup](https://pkg.go.dev/sync#WaitGroup)
+
+## Error Control
+
+### Defer
+
+```go
+func main() {
+  defer fmt.Println("Done")
+  fmt.Println("Working...")
+}
+
+```
+
+- Defers running a function until the surrounding function returns. The arguments are evaluated immediately, but the function call is not ran until later.
+- See: [Defer, panic and recover](https://go.dev/blog/defer-panic-and-recover)
+
+### Deferring functions
+
+```go
+func main() {
+  defer func() {
+    fmt.Println("Done")
+  }()
+  fmt.Println("Working...")
+}
+// Lambdas are better suited for defer blocks.
+
+func main() {
+  var d = int64(0)
+  defer func(d *int64) {
+    fmt.Printf("& %v Unix Sec\n", *d)
+  }(&d)
+  fmt.Print("Done ")
+  d = time.Now().Unix()
+}
+// The defer func uses current value of d, unless we use a pointer to get final value at end of main.
+```
+
+## Structs
+
+### Defining
+
+```go
+type Vertex struct {
+  X int
+  Y int
+}
+ 
+func main() {
+  v := Vertex{1, 2}
+  v.X = 4
+  fmt.Println(v.X, v.Y)
+}
+```
+
+- See: [Structs](https://go.dev/tour/moretypes/2)
+
+### Literals
+
+```go
+v := Vertex{X: 1, Y: 2}
+
+// Field names can be omitted (省略)
+v := Vertex{1, 2}
+
+// Y is implicit (隐含的)
+v := Vertex{X: 1}
+```
+
+- You can also put field names.
+
+### Pointers to structs
+
+```go
+v := &Vertex{1, 2}
+v.X = 2
+```
+
+- Doing v.X is the same as doing (*v).X, when v is a pointer.
+
+
+## Methods
+
+### Receivers
+
+```go
+type Vertex struct {
+  X, Y float64
+}
+
+func (v Vertex) Abs() float64 {
+  return math.Sqrt(v.X * v.X + v.Y * v.Y)
+}
+```
+
+- There are no classes, but you can define functions with receivers.
+- See: [Methods](https://go.dev/tour/methods/1)
+
+### Mutation
+
+```go
+func (v *Vertex) Scale(f float64) {
+  v.X = v.X * f
+  v.Y = v.Y * f
+}
+ 
+v := Vertex{6, 12}
+v.Scale(0.5)
+// `v` is updated
+```
+
+- By defining your receiver as a pointer (*Vertex), you can do mutations.
+- See: [Pointer receivers](https://go.dev/tour/methods/4)
+
+## Interfaces
+
+### A basic interface
+
+```go
+type Shape interface {
+  Area() float64
+  Perimeter() float64
+}
+```
+
+### Struct
+
+```go
+type Rectangle struct {
+  Length, Width float64
+}
+```
+
+- Struct `Rectangle` implicitly implements interface Shape by implementing all of its methods.
+
+### Methods
+
+```go
+func (r Rectangle) Area() float64 {
+  return r.Length * r.Width
+}
+
+func (r Rectangle) Perimeter() float64 {
+  return 2 * (r.Length + r.Width)
+}
+```
+
+- The methods defined in `Shape` are implemented in `Rectangle`.
+
+### Interface example
+
+```go
+func main() {
+  var r Shape = Rectangle{Length: 3, Width: 4}
+  fmt.Printf("Type of r: %T, Area: %v, Perimeter: %v.", r, r.Area(), r.Perimeter())
+}
+```
+
+## References
+
+https://devhints.io/go
+
