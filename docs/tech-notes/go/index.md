@@ -1,5 +1,7 @@
 # Go
 
+[Download](https://go.dev/dl/)
+
 ## [What is Go?](https://go.dev)
 - Go is a cross-platform, open source programming language
 - Go can be used to create high-performance applications
