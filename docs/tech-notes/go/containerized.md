@@ -7,15 +7,20 @@
 - Go installed on your machine. You can download it from [Golang](https://go.dev).
 - Docker installed on your machine
 
-### Step 1: Initialize
+### Step 1: Initialize the Project
+
+Create a new directory for your project and initialize a Go module:
 
 ```bash
-kelvinyoukokeng@Kelvins-Mac-mini go-practice % mkdir 3-containerized-go-app
-kelvinyoukokeng@Kelvins-Mac-mini go-practice % cd 3-containerized-go-app 
-kelvinyoukokeng@Kelvins-Mac-mini 3-containerized-go-app % go mod init 3-containerized-go-app
+mkdir containerized-go-app
+cd containerized-go-app
+go mod init containerized-go-app
+
 ```
 
-### Step 2: Create main.go
+### Step 2: Write Your Go Application
+
+Create a main.go file with a simple Go application:
 
 ```go
 package main
@@ -27,7 +32,9 @@ func main() {
 }
 ```
 
-## Step 3: Create dockerfile
+### Step 3: Create a dockerfile
+
+Create a Dockerfile in the project directory with the following content:
 
 ```dockerfile
 FROM golang:1.21.5
@@ -37,30 +44,34 @@ WORKDIR /app
 COPY go.mod .
 COPY main.go .
 
+# Build the Go application
 RUN go build -o bin .
 
+# Set the entry point
 ENTRYPOINT [ "/app/bin" ]
 ```
 
+### Step 4: Build and Run the Docker Image
+
 Open docker
 
-Build
+Build the Docker image using the following command
 
 ```bash
 docker build . -t go-containerized:latest
 ```
 
-
-
 ```bash
 docker image ls | grep go-containerized
 ```
 
-Run it and will see the result
+Run the Docker container:
 
 ```bash
 docker run go-containerized:latest
 ```
+
+### Step 5: Adding a Router (Optional)
 
 add `go get`, this is use to get all the packages inside `go.mod`
 
@@ -79,9 +90,7 @@ RUN go build -o bin .
 ENTRYPOINT [ "/app/bin" ]
 ```
 
-### With router
-
-main.go
+If you want to create a Go web server using a router, you can use a library like Gin. Here's how to modify your `main.go` file to include Gin:
 
 ```go
 package main
@@ -115,3 +124,4 @@ docker build . -t go-containerized-api:latest
 docker run -e POST=8080 -p 8080:8080 go-containerized-api:latest
 ```
 
+Build and run the Docker image as before, and your Go web server with Gin should be accessible at http://localhost:8080/hello.

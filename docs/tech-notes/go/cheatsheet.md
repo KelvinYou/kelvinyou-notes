@@ -1,8 +1,31 @@
 # Go - Cheat Sheet
 
+## Debug
+
+```go
+import "log"
+
+log.Println("debug");
+```
+
+<details>
+
+<summary>Why should I use log.Println instead of fmt.Println?</summary>
+
+Two things are different:
+
+* Printing via package log is safe from concurrent goroutines (while plain fmt isn't)
+* Log can add timing information automatically.
+
+So these are two completely different things. log is for logging and fmt for formatting. (Okay, log uses the same verbs and flags, but that is just convenient).
+
+Reference: 
+https://stackoverflow.com/questions/19646889/why-should-i-use-log-println-instead-of-fmt-println
+
+</details>
+
+
 ## Basic Types & Variables
-
-
 ```go
 // Variable declaration
 var msg string
