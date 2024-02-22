@@ -16,13 +16,21 @@
 - Developing cross-platform enterprise applications
 - Cloud-native development
 
-
 ## Why Use Go?
 - Go is fun and easy to learn
 - Go has fast run time and compilation time
 - Go supports concurrency
 - Go has memory management
 - Go works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)
+
+## Six Main Points about Go
+
+1. Statically Typed Language
+1. Strongly Typed Language
+1. GO is Compiled (faster than python 120x)
+1. Fast Compile Time
+1. Built In Concurrency (Goroutines)
+1. Simplicity 
 
 ## Go - Pros and Cons
 

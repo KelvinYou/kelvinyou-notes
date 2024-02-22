@@ -1,5 +1,7 @@
 # Go - Gin
 
+import TotalDaysAgo from '@site/src/components/TotalDaysAgo';
+
 ## Quick Start: Building a Web Server with Gin
 
 This guide will walk you through the process of setting up a basic web server using the Gin framework in Go.
@@ -83,3 +85,26 @@ You should see the response
 ```json
 {"message":"Hello, World!"}.
 ```
+
+## BoilerPlate
+
+
+Use Go cli to install
+
+```bash
+go get github.com/<username>/<repo>
+cd into the <repo>
+go mod init
+go install
+```
+
+1. [Massad/gin-boilerplate](https://github.com/Massad/gin-boilerplate)
+	- DB: Postgres
+	- Auth: Jwt
+	- Cache: Redis
+
+1. [vsouza/go-gin-boilerplate](https://github.com/vsouza/go-gin-boilerplate)
+	- DB: DynamoDB
+
+
+Last Updated: <TotalDaysAgo inputDate="2024-02-21" />

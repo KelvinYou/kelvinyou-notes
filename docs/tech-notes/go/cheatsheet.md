@@ -57,7 +57,8 @@ x, msg := 1, "Hello"
 str := "Hello"
 str2 := `Multiline
 string`
-
+str3 := "Multiline \nstring"
+str3 := "Multiline" + " " + "string"
 // Strings are of type string.
 ```
 
@@ -171,6 +172,25 @@ const (
 )
 
 // It then uses the `iota` identifier to tell the Go compiler you want the first value to start at 0, and then increment by 1 for each following constant
+```
+
+### Go casting
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    var num1 int32 = 10
+    var num2 int64
+
+    num2 = int64(num1)
+
+    fmt.Println("num1: ", num1)
+    fmt.Println("num2: ", num2)
+}
 ```
 
 ## Flow Control
