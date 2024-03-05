@@ -11,7 +11,7 @@ Keep my notes as simple as possible. I am the only user of this.
 :::
 
 ## Type of Note
-- [React](/docs/category/react)
+- [React](/docs/category/-react)
 - [Solidity](/docs/category/solidity)
 - [Markdown](/docs/category/markdown)
 
