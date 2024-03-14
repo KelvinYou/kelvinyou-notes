@@ -38,6 +38,13 @@ key terms:
 ### 6. Code on Demand (Optional)
 
 
+## Good APIs Vs Bad APIs: 7 Tips for API Design
+
+<iframe width="100%" height="315px" src="https://www.youtube.com/embed/_gQaygjm_hg?si=GsLTCHp0CTGngRs2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Top 7 Ways to 10x Your API Performance
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/zvWKqUiovAM?si=ZIDJea5edTZz3WXL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Reference
 
