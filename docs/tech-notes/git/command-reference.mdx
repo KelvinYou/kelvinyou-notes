@@ -56,3 +56,16 @@ sidebar_position: 3
 |------------------------------------|---------------------------------------------------|
 | Initialize submodules              | `git submodule init`                    |
 | Update submodules                  | `git submodule update`                  |
+
+## Revert a commit
+
+1. `git log` to check log
+2. `git reset --hard HEAD^`
+3. `git push origin <branch> --force`
+
+example
+```bash
+git log
+git reset --hard d37c4bb36ebbb03e0f3beccb72418e153bf7b367
+git push origin feat-country-comparison-gr-2024-3-20 --force
+```
