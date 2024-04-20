@@ -1,5 +1,8 @@
 # Rust - Cheat Sheet
 
+1. Cheatsheet
+https://cheats.rs/
+
 ## Basic Types & Variables
 
 `bool` - Boolean

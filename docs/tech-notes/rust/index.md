@@ -1,6 +1,15 @@
 # Rust
 
+1. Rust-Language Official Website
 https://www.rust-lang.org/
+
+1. Rust-Language Docs
+https://doc.rust-lang.org/book/
+
+1. Docs
+https://docs.rs/
+
+
 
 ## When to use rust?
 
