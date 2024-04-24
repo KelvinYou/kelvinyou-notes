@@ -23,12 +23,18 @@ The majority of this response leans on your past work experience, with a small d
 
 Example:
 
-I'm Kelvin, a passionate software engineer with a strong foundation in software engineering and about a year and a half of software development experience (including internships).
+Hello, my name is Kelvin You, and I'm a software engineer with a passion for frontend development. I graduated from TARUMT with a Bachelor's degree in Software Engineering, achieving a commendable CGPA of 3.72.
 
-Currently I work as a front-end developer at Beyondsoft, a Chinese outsourcing company that I was outsourced to Tencent.
-- The main technology stacks we use here are reactjs and typescript
+Currently, I'm leveraging my skills as a frontend developer at Beyondsoft Malaysia, where I'm entrusted with managing a critical game analysis dashboard. This dashboard serves as a vital tool for tracking key metrics such as daily active users, revenue generation, new user acquisition, and user retention. I'm responsible for ensuring that this dashboard provides insightful comparisons with historical data, enabling our team to make data-driven decisions.
 
-My hobbies are playing chess and writing some code. I often play chess during my commute to and from get off work. And also trying out some new tech stacks like NextJS, NestJS, Gin-gonic to create my portfolio
+In addition to these core functionalities, I'm also tasked with implementing various features such as real-time analytics, user engagement analysis, monetization insights, and competitor comparisons. A significant aspect of my role involves handling multiple API calls efficiently to fetch and display relevant data. I take pride in creating reusable components such as filters, dynamic charts, and tables based on designs provided by our product team or senior management.
+
+Furthermore, I actively seek opportunities to enhance our frontend architecture to optimize performance. This includes designing efficient routing strategies and exploring new technologies to stay ahead of industry trends. As a chess player, I approach software development with strategic thinking and a keen eye for detail, constantly striving to improve and innovate.
+
+Outside of my professional effort, I enjoy experimenting with new technologies such as Next.js, Nest.js, and exploring languages like Golang and Rust. This allows me to develop reusable functions and components, further expanding my skill set and contributing to the broader tech community.
+
+Overall, I'm deeply passionate about frontend development and thrive in dynamic environments where I can leverage my technical expertise to create impactful solutions.
+
 
 </details>
 
@@ -82,6 +88,16 @@ Additionally, I played a key role in optimizing the performance of our web appli
 Furthermore, I spearheaded the implementation of a new frontend testing strategy utilizing modern testing frameworks like Jest and React Testing Library. By establishing comprehensive test suites for critical UI components and features, I helped improve the stability and reliability of our codebase, reducing the occurrence of bugs and regressions in production.
 
 Overall, these achievements demonstrate my ability to drive impactful changes through effective collaboration, strategic problem-solving, and a commitment to delivering high-quality frontend solutions that align with both user needs and business goals.
+
+</details>
+
+
+<details>
+
+<summary>They may ask specific questions about your previous projects, challenges you've faced, and how you overcame them.</summary>
+
+
+
 
 </details>
 
