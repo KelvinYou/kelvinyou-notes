@@ -94,9 +94,33 @@ Overall, these achievements demonstrate my ability to drive impactful changes th
 
 <details>
 
-<summary>They may ask specific questions about your previous projects, challenges you've faced, and how you overcame them.</summary>
+<summary>Temp: to be organized </summary>
 
+Certainly! Here's an example of how the interview might be structured:
 
+**Introduction (5 minutes)**:
+- The interviewer welcomes you to the interview and introduces themselves.
+- They provide an overview of the interview process, mentioning that it will consist of a video interview followed by a whiteboard coding assessment, focusing on your front-end development experience, particularly your knowledge of JavaScript.
+- They briefly explain the format and duration of each part of the interview.
+
+**Video Interview (30 minutes)**:
+- The interviewer begins by asking you to introduce yourself, highlighting your relevant experience in front-end development and your proficiency in JavaScript.
+- They may ask specific questions about your previous projects, challenges you've faced, and how you overcame them.
+- The interviewer might inquire about your familiarity with specific JavaScript frameworks or libraries, your understanding of modern front-end development practices, and your approach to problem-solving in JavaScript.
+
+**Technical Coding Assessment (25 minutes)**:
+- The interviewer shares their screen to start the whiteboard coding assessment.
+- They present you with a coding problem related to front-end development, such as implementing a specific feature using JavaScript, manipulating the DOM, or solving a common algorithmic challenge.
+- You are given a certain amount of time (e.g., 20 minutes) to solve the problem.
+- During this time, you explain your thought process, ask clarifying questions if needed, and write code on the virtual whiteboard within the Codility platform.
+- The interviewer may provide feedback or guidance as you work through the problem.
+
+**Wrap-Up (5 minutes)**:
+- The interviewer concludes the interview by thanking you for your time and participation.
+- They may ask if you have any questions for them about the company, the role, or the interview process.
+- They provide information on the next steps in the hiring process, such as when you can expect to hear back from them regarding the outcome of the interview.
+
+Throughout the interview, the focus is on assessing your technical skills in front-end development, particularly your proficiency in JavaScript, as well as your problem-solving abilities, communication skills, and overall fit for the role.
 
 
 </details>
