@@ -1,0 +1,111 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Common
+
+## Convert a string to title case (capitalize the first letter of each word).  toTitleCase
+
+<Tabs>
+  <TabItem value="ts" label="Typescript" default>
+    ```ts
+    function toTitleCase(str: string): string { 
+      return str.replace(/\b\w/g, l => l.toUpperCase()); 
+    } 
+    ```
+
+  </TabItem>
+  <TabItem value="go" label="Go">
+    ```go
+      package main
+
+      import (
+        "fmt"
+        "strings"
+      )
+
+      // Function to convert a string to title case
+      func toTitleCase(str string) string {
+        // Split the string into words
+        words := strings.Fields(str)
+
+        // Iterate over each word and capitalize the first letter
+        for i, word := range words {
+          words[i] = strings.Title(word)
+        }
+
+        // Join the words back into a single string
+        return strings.Join(words, " ")
+      }
+
+      func main() {
+        // Example usage
+        input := "hello world"
+        titleCase := toTitleCase(input)
+        fmt.Println(titleCase) // Output: Hello World
+      }
+    ```
+  </TabItem>
+</Tabs>
+
+
+
+
+## A function to check if a given string is a palindrome. 
+
+```ts
+function isPalindrome(str: string): boolean {
+    // Remove punctuation and whitespace and convert to lowercase
+    const cleanedStr = str.replace(/[^\w]/g, '').toLowerCase();
+    // Compare the cleaned string with its reverse
+    return cleanedStr === cleanedStr.split('').reverse().join('');
+}
+```
+
+```ts
+// Example usage:
+const testString1 = "A man, a plan, a canal, Panama!";
+console.log(isPalindrome(testString1)); // Output: true
+
+const testString2 = "racecar";
+console.log(isPalindrome(testString2)); // Output: true
+
+const testString3 = "hello";
+console.log(isPalindrome(testString3)); // Output: false
+
+```
+
+## Implement a function to reverse a string without using the built-in reverse() method. 
+
+```ts
+function reverseString(str: string): string {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+
+console.log("reverseString: ", reverseString('hello world'));
+
+```
+
+## Given an array of numbers, write a function to find the largest and smallest numbers in the array.
+
+```ts
+function findMinMax(arr) { 
+  let min = Math.min(...arr); 
+  let max = Math.max(...arr); 
+  return [min, max]; 
+
+}
+
+console.log(findMinMax([1, 2, 3]));
+```
+
+...to be continue
+
+
+## Reference
+
+https://the-algorithms.com/category/datastructures
+https://www.keka.com/javascript-coding-interview-questions-and-answers

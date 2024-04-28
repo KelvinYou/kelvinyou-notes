@@ -9,31 +9,31 @@ https://leetcode.com/problems/sum-root-to-leaf-numbers/description
 ```ts
 
 class TreeNode {
-    val: number;
-    left: TreeNode | null;
-    right: TreeNode | null;
+	val: number;
+	left: TreeNode | null;
+	right: TreeNode | null;
 
-    constructor(val: number = 0, left: TreeNode | null = null, right: TreeNode | null = null) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
+	constructor(val: number = 0, left: TreeNode | null = null, right: TreeNode | null = null) {
+		this.val = val;
+		this.left = left;
+		this.right = right;
+	}
 }
 
 function sumNumbers(root: TreeNode | null): number {
-    function dfs(node: TreeNode | null, currentSum: number): number {
-        if (!node) return 0;
+	function dfs(node: TreeNode | null, currentSum: number): number {
+		if (!node) return 0;
 
-        currentSum = currentSum * 10 + node.val;
+		currentSum = currentSum * 10 + node.val;
 
-        if (!node.left && !node.right) { // Check if leaf node
-            return currentSum;
-        }
+		if (!node.left && !node.right) { // Check if leaf node
+			return currentSum;
+		}
 
-        return dfs(node.left, currentSum) + dfs(node.right, currentSum);
-    }
-    
-    return dfs(root, 0);
+		return dfs(node.left, currentSum) + dfs(node.right, currentSum);
+	}
+	
+	return dfs(root, 0);
 }
 
 ```
