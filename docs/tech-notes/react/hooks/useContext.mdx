@@ -10,12 +10,99 @@ sidebar_position: 3
 const value = useContext(SomeContext)
 ```
 
+From my experience:
+穿透所有组件，不用一层一层pass props。需要传很多层的可以考虑用这个
+
 ## Reference
 
-```js
-import { useContext } from 'react';
+`useContext` is a React Hook used for accessing context in functional components. Context provides a way to pass data through the component tree without having to pass props down manually at every level. Here are some example use cases of `useContext`:
 
-function MyComponent() {
-  const theme = useContext(ThemeContext);
-  // ...
-```
+1. **Theme Switching**:
+   You might have a theme context that holds the current theme of your application. Components throughout your app can access this context to render themselves appropriately.
+   
+   ```jsx
+   // ThemeContext.js
+   import React, { createContext, useState } from 'react';
+
+   export const ThemeContext = createContext();
+
+   export const ThemeProvider = ({ children }) => {
+     const [theme, setTheme] = useState('light');
+
+     return (
+       <ThemeContext.Provider value={{ theme, setTheme }}>
+         {children}
+       </ThemeContext.Provider>
+     );
+   };
+   ```
+
+   Now, any component within `ThemeProvider` can access and update the theme using `useContext(ThemeContext)`.
+
+2. **User Authentication**:
+   You might have a user context that holds information about the currently authenticated user.
+
+   ```jsx
+   // UserContext.js
+   import React, { createContext, useState } from 'react';
+
+   export const UserContext = createContext();
+
+   export const UserProvider = ({ children }) => {
+     const [user, setUser] = useState(null);
+
+     return (
+       <UserContext.Provider value={{ user, setUser }}>
+         {children}
+       </UserContext.Provider>
+     );
+   };
+   ```
+
+   Now, any component within `UserProvider` can access and update the user data using `useContext(UserContext)`.
+
+3. **Language Localization**:
+   You might have a context that holds the current language/locale of the application.
+
+   ```jsx
+   // LanguageContext.js
+   import React, { createContext, useState } from 'react';
+
+   export const LanguageContext = createContext();
+
+   export const LanguageProvider = ({ children }) => {
+     const [language, setLanguage] = useState('en');
+
+     return (
+       <LanguageContext.Provider value={{ language, setLanguage }}>
+         {children}
+       </LanguageContext.Provider>
+     );
+   };
+   ```
+
+   Now, any component within `LanguageProvider` can access and update the language using `useContext(LanguageContext)`.
+
+4. **Managing Global State**:
+   Instead of using complex state management libraries like Redux for simple global state management, you can use context and `useContext` for managing global state.
+
+   ```jsx
+   // AppStateContext.js
+   import React, { createContext, useState } from 'react';
+
+   export const AppStateContext = createContext();
+
+   export const AppStateProvider = ({ children }) => {
+     const [state, setState] = useState({});
+
+     return (
+       <AppStateContext.Provider value={{ state, setState }}>
+         {children}
+       </AppStateContext.Provider>
+     );
+   };
+   ```
+
+   Now, any component within `AppStateProvider` can access and update the global state using `useContext(AppStateContext)`.
+
+These are just a few examples, but `useContext` can be applied in various scenarios where you need to share state or functionality across multiple components without prop drilling.

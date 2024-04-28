@@ -156,7 +156,10 @@ const config = {
     markdown: {
       mermaid: true,
     },
-    themes: ['@docusaurus/theme-mermaid'],
+    themes: [
+      '@docusaurus/theme-mermaid',
+      '@docusaurus/theme-live-codeblock'
+    ],
 };
 
 export default config;
