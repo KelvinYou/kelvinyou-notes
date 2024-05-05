@@ -1,0 +1,108 @@
+# JS Array
+
+## Methods
+
+### length
+
+The `length` property returns the length (size) of an array:
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let size = fruits.length;
+console.log('size: ', 4); // result: size: 4
+```
+
+### toString()
+
+The JavaScript method `toString()` converts an array to a string of (comma separated) array values.
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.toString()) // result: Banana,Orange,Apple,Mango
+```
+
+### at()
+
+ES2022 intoduced the array method at():
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.at(2); // result: Apple
+```
+
+Too redundant for me, I prefer using `fruits[2]`;
+
+### join()
+
+The `join()` method also joins all array elements into a string.
+
+It behaves just like `toString()`, but in addition you can specify the separator:
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.join(" * ")); // result: Banana * Orange * Apple * Mango
+```
+
+### pop()
+
+The `pop()` method removes the last element from an array:
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.pop();
+console.log(fruit); // Mango
+console.log(fruits); // ["Banana", "Orange", "Apple"]
+```
+
+### push()
+
+The `push()` method adds a new element to an array (at the end):
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+```
+
+more on [W3 Schools](https://www.w3schools.com/js/js_array_methods.asp#mark_shift)
+## Search
+
+### indexOf()
+
+```js
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let index = fruits.indexOf("Apple"); // result: 0 -> first index
+
+```
+
+### lastIndexOf()
+
+
+
+### includes()
+
+ECMAScript 2016 introduced `Array.includes()` to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.includes("Mango"); // is true
+
+```
+
+more on [W3 Schools](https://www.w3schools.com/js/js_array_search.asp#mark_find)
+
+## Sort
+
+
+more on [W3 Schools](https://www.w3schools.com/js/js_array_sort.asp#mark_numeric)
+
+
+## Iteration
+
+
+more on [W3 Schools](https://www.w3schools.com/js/js_array_iteration.asp#mark_every)
+
+
+## Const
+
+
+more on [W3 Schools](https://www.w3schools.com/js/js_array_const.asp)
