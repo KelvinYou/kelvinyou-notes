@@ -11,4 +11,5 @@ TypeScript allows specifying the types of data being passed around within the co
 For example, TypeScript will report an error when passing a string into a function that expects a number. JavaScript will not.
 
 
-
+## Tutorial
+https://www.w3schools.com/typescript/index.php
