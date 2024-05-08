@@ -65,9 +65,87 @@ Vertical slices (separation by pages/domains)
 
 ![alt text](image-8.png)
 
+
+### Bad
+
 ![alt text](image-10.png)
 
-To be continue at 21:16 - micro-frontends key points
+### Key points
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+![alt text](image-13.png)
+
+### Use cases
+
+![alt text](image-14.png)
+
+![alt text](image-15.png)
+
+![alt text](image-16.png)
+
+### Anti use cases
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
+
+
+### Key points
+
+![alt text](image-19.png)
+
+### Implementation
+
+![alt text](image-20.png)
+
+### Server Side Template Composition
+
+![alt text](image-21.png)
+
+![alt text](image-22.png)
+
+### Run time integration
+
+![alt text](image-23.png)
+
+### Run time integration via Webpack Module Federation
+
+![alt text](image-24.png)
+
+### Build time integration
+
+![alt text](image-25.png)
+
+### Implementation Summary
+
+- We do not use build-time integration because of the need to recompile the application every time, which contradicts the idea of Micro-Frontend independence.
+
+- We use service-side template composition when our site is already using server-side rendering (e.g. e-commerce sites).
+
+![alt text](image-26.png)
+
+## Modular Monolith
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To be continue at 34.00 - Modular Monolith
 https://www.youtube.com/watch?v=2qtgegNSUoE
 
 ## Reference
