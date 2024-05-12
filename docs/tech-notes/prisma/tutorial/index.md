@@ -1,7 +1,6 @@
 # Prisma - Tutorial
 
-https://www.prisma.io/docs/getting-started
-https://www.youtube.com/watch?v=RebA5J-rlwg
+https://www.prisma.io/docs/getting-started/quickstart
 
 - install typescript because prisma is builded on typescript
 
@@ -13,6 +12,7 @@ npm i --save-dev prisma typescript ts-node @types/node nodemon
 ```
 
 
+https://www.youtube.com/watch?v=RebA5J-rlwg
 
 
 
