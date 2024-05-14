@@ -23,6 +23,13 @@ If the code in the React article has an interactive Result, the `import` and `ex
 
 :::
 
+## SOP
+
+1. Easy to understand?
+2. Easy to copy?
+3. Easy to edit?
+
+
 ## Logs
 
 - 2024-01-22: Added `React`, `Solidity`, `Markdown` package.
