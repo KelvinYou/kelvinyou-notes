@@ -4,7 +4,7 @@
 
 In React applications, state management ensures that data flows efficiently between components. It becomes especially important as the application grows, and various components need access to shared data. Redux, Zustand, and Context API are tools that address this challenge by providing efficient and organized ways to manage state.
 
-## Type of State Manament
+## Type of State Management
 
 ### Redux: The Predictable State Container
 
