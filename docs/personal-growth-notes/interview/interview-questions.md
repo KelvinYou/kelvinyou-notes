@@ -23,17 +23,16 @@ The majority of this response leans on your past work experience, with a small d
 
 Example:
 
-Hello, my name is Kelvin You, and I'm a software engineer with a passion for frontend development. I graduated from TARUMT with a Bachelor's degree in Software Engineering, achieving a commendable CGPA of 3.72.
+我是Kelvin，目前从事前端开发已经有2年多的经验，比较擅长React.js，Typescript，Node.js，Golang，也对这些技术栈感兴趣。
+目前，我在 Simpletruss 负责 一款面向 vendor 的 Property Management SaaS 平台。该平台提供 technician 排班管理、工单处理、发票支付和数据报告等功能。
+在项目中，我主要负责 前端开发，具体包括：
+- Dashboard、Schedule Calendar、图表和 Listing Page 的开发，优化用户交互体验。
+- 使用 TailwindCSS + ShadCN 构建 UI 组件库，提升团队协作效率，确保前端风格统一。
+- GraphQL + Apollo Client 进行数据管理，优化 API 调用，提高性能。
 
-Currently, I'm leveraging my skills as a frontend developer at Beyondsoft Malaysia, where I'm entrusted with managing a critical game analysis dashboard. This dashboard serves as a vital tool for tracking key metrics such as daily active users, revenue generation, new user acquisition, and user retention. I'm responsible for ensuring that this dashboard provides insightful comparisons with historical data, enabling our team to make data-driven decisions.
+除此之外，我也利用 Next.js 和 ShadCN 开发个人项目，积累了 前端架构、性能优化 方面的经验。如果有时间，我也能展示其中的部分功能
 
-In addition to these core functionalities, I'm also tasked with implementing various features such as real-time analytics, user engagement analysis, monetization insights, and competitor comparisons. A significant aspect of my role involves handling multiple API calls efficiently to fetch and display relevant data. I take pride in creating reusable components such as filters, dynamic charts, and tables based on designs provided by our product team or senior management.
-
-Furthermore, I actively seek opportunities to enhance our frontend architecture to optimize performance. This includes designing efficient routing strategies and exploring new technologies to stay ahead of industry trends. As a chess player, I approach software development with strategic thinking and a keen eye for detail, constantly striving to improve and innovate.
-
-Outside of my professional effort, I enjoy experimenting with new technologies such as Next.js, Nest.js, and exploring languages like Golang and Rust. This allows me to develop reusable functions and components, further expanding my skill set and contributing to the broader tech community.
-
-Overall, I'm deeply passionate about frontend development and thrive in dynamic environments where I can leverage my technical expertise to create impactful solutions.
+我对 FinTech 行业 尤其是 加密支付、Web3 钱包集成 深感兴趣，期待能加入 dtcpay，结合我的 前端技术和用户体验优化能力，打造更高效的加密支付产品，同时在 金融科技和 Web3 领域 进一步成长
 
 
 </details>
