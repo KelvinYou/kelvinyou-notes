@@ -80,7 +80,7 @@
 
 ### 自我介绍
 
-我是Kelvin，目前从事前端开发已经有2年多的经验，比较擅长React.js，Typescript，Node.js，Golang，也对这些技术栈感兴趣。
+我是Kelvin，目前从事前端开发已经有2年多的经验，比较擅长React.js，Typescript，Node.js，也对这些技术栈感兴趣。
 目前，我在 Simpletruss 负责 一款面向 vendor 的 Property Management SaaS 平台。该平台提供 technician 排班管理、工单处理、发票支付和数据报告等功能。
 在项目中，我主要负责 前端开发，具体包括：
 - Dashboard、Schedule Calendar、图表、聊天功能和 Listing Page 的开发，优化用户交互体验。
@@ -942,6 +942,25 @@ const { data, isLoading, error } = useQuery(["user"], fetchUser);
 ---
 
 ### **1. 介绍一个你做过的前端项目，遇到了哪些挑战，你是如何解决的？**  
+
+问题1：目前网页上的forms越来越多也越来越复杂，也经常需要根据需求做调整，导致了有很多state和手动编写的逻辑。就很容易导致很多重复代码需要同时更改，类型不匹配，特别是在复杂性很高的form上，整体可读性也很差
+
+例子：我们的quote module有个form是同时用于创建/修改quote，创建/修改quote template，里面包含了让用户去选择work order或者opportunities，让用户选择line items，里面的资料可以让用户进行更改，图片上传和更改等等
+
+后来想到的办法就是使用 Zod 和 React Hook Form 的结合，提升可维护性和性能
+- 类型安全：zod schema写出可复用的validation，
+- react hook form处理form的state管理以及自动化错误管理，让整体简化不少
+- 性能优化：rhk的核心就是非受控组件，只有在需要的时候才会更新DOM。输入时候不会重新渲染。zod验证会在提交时进行，避免了每次输入中进行昂贵的验证计算
+
+问题2：在处理一个具有大量数据的列表页面，并且每个 item 根据 status 渲染不同的 action buttons 和 样式，以及提供 filter、save filter、search、manage column功能时，会遇到以下几个主要挑战。这里将列出这些挑战和对应的解决方案
+
+1. lazy load 提高性能
+2. dynamic render menu button，用react.memo包起来
+3. search使用debounce，确保不会重新渲染
+4. 使用search params去处理filter (因为有从其他页面带过来)
+
+
+
 **项目名称**：📌 **学费管理系统（Tuition Management System）**（当前开发中的 SaaS 项目）  
 **技术栈**：Next.js 15、React、TypeScript、Supabase（RBAC）、PostgreSQL、ShadCN  
 **核心功能**：
@@ -954,11 +973,9 @@ const { data, isLoading, error } = useQuery(["user"], fetchUser);
 **挑战 & 解决方案**：
 | **挑战** | **解决方案** |
 |---------|-------------|
-| **1. 课程时间表管理** 📅  | 使用 PostgreSQL `recurring events` 设计，每个班级支持**每周多次排课** |
 | **2. 动态表单管理** ✍️ | 使用 **React Hook Form + Zod** 进行表单校验，提高灵活性 |
 | **3. RBAC 权限控制** 🔐 | 基于 **Supabase 的 Policies** 和 Next.js 中间件，限制不同角色的访问 |
 | **4. 课程可用性状态** 🚦 | 采用 **状态机（State Machine）** 处理课程的“未开始 / 进行中 / 结束”状态 |
-| **5. 数据缓存 & 提高性能** 🚀 | **React Query** 进行请求缓存，减少 API 调用次数，提高用户体验 |
 
 **收获**：
 ✅ 通过 PostgreSQL 的 `interval` 和 `generate_series` 轻松实现了 **周期性课程排课**  
