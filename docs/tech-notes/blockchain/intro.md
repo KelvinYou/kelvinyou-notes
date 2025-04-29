@@ -8,9 +8,9 @@ Getting started as a Web3 engineer means building skills across blockchain funda
 
 | Area | What to Learn | Resources |  
 |---|---|---|  
-| **Blockchain basics** | How blocks, chains, consensus (PoW/PoS), nodes, wallets work | • “Mastering Bitcoin” (Andreas M.)<br>• Ethereum whitepaper |  
-| **Cryptography** | Hash functions, public-key crypto, digital signatures | • Stanford’s Crypto course (online)<br>• Khan Academy cryptography tutorials |  
-| **Ethereum & EVM** | Accounts, gas, transactions, EVM execution model | • Ethereum docs<br>• “Mastering Ethereum” (Wood & Antonopoulos) |  
+| **Blockchain basics** | How blocks, chains, consensus (PoW/PoS), nodes, wallets work | • “Mastering Bitcoin” (Andreas M.) • Ethereum whitepaper |  
+| **Cryptography** | Hash functions, public-key crypto, digital signatures | • Stanford’s Crypto course (online) • Khan Academy cryptography tutorials |  
+| **Ethereum & EVM** | Accounts, gas, transactions, EVM execution model | • Ethereum docs • “Mastering Ethereum” (Wood & Antonopoulos) |  
 
 ---
 
