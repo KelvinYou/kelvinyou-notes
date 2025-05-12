@@ -1,8 +1,10 @@
 # Model Context Protocol (MCP)
 
-![alt text](./mcp-architecture.png)
+![alt text](./main.png)
 
 The **Model Context Protocol (MCP)** is an open standard for structuring and delivering context to large language models (LLMs). It’s often described as a “USB-C port for AI”: a universal interface that connects an LLM to the various data sources, tools, and instructions it needs. By providing a **single, standardized protocol** for context, MCP lets developers plug any compliant AI model into any compliant data source or tool without custom glue code. This solves the common problem where each new database, API, or service would otherwise need its own integration, making AI-powered apps hard to build and scale. In short, MCP creates a **uniform way to share prompts, data, and tools with LLMs**, helping models produce more reliable and relevant responses.
+
+![alt text](./mcp-architecture.png)
 
 ## How MCP Structures Context
 
