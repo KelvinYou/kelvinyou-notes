@@ -69,3 +69,33 @@ git log
 git reset --hard d37c4bb36ebbb03e0f3beccb72418e153bf7b367
 git push origin feat-country-comparison-gr-2024-3-20 --force
 ```
+
+## Revert git merge
+
+| Task                               | Command                                 |
+|------------------------------------|-----------------------------------------|
+| Abort a merge in progress          | `git merge --abort`                    |
+
+## Replace git commit
+
+| Task                               | Command                                 |
+|------------------------------------|-----------------------------------------|
+| Amend the last commit message      | `git commit --amend -m "new message"`  |
+
+example
+```bash
+git commit --amend -m "feat(cards): implement auto debit limit feature"
+```
+
+## Git move - move div/file to another div/file
+
+| Task                               | Command                                 |
+|------------------------------------|-----------------------------------------|
+| Move/rename files or directories   | `git mv <source> <destination>`        |
+
+## Git extra - copy div/file
+
+| Task                               | Command                                 |
+|------------------------------------|-----------------------------------------|
+| Install git-extras for additional commands | `brew install git-extras`        |
+| Reference                          | https://formulae.brew.sh/formula/git-extras |

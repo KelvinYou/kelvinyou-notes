@@ -50,6 +50,11 @@
 
 ### [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
+### ESLint
+
+### Dependi
+
+### GitHub Pull Requests
 
 ## Viewers
 
